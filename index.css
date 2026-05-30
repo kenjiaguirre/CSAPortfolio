@@ -1,0 +1,133 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+header{
+width:100%;
+padding:20px;
+height:100px;
+color:white;
+background-image: linear-gradient(to bottom, black, rgba(255, 0, 0, 0));
+top:0px;
+position:fixed;
+pointer-events: none;
+z-index: -1;
+}
+
+main{
+
+height: 100%;
+background: red;
+display: flex;
+}
+
+main > div{
+width:35%;
+transition: width 0.5s;
+}
+
+main > div:hover{
+width:80%;
+}
+
+main > div:first-child{
+background: url("robotcode.jpg");
+background-position: left;
+background-size: 1500px 1000px;
+transition:all 0.5s;
+}
+
+main > div:first-child:hover{
+background-size: 1250px 833px;
+background-position:center;
+}
+
+main > div:nth-child(2){
+background: url("javacode.jpg");
+background-position: center;
+background-size: 1400px 935px;
+transition:all 0.5s;
+}
+
+main > div:nth-child(2):hover{
+background-size: 1300px 850px;;
+}
+
+main > div:nth-child(3){
+background: url("questionguy.jpg");
+background-position: center;
+background-size: 975px 1390px;
+transition:all 0.5s;
+}
+
+main > div:nth-child(3):hover{
+background-size: 750px 1000px;
+}
+
+.top{
+	height:0px;
+	opacity:0;
+	transition: all 0.5s;
+	position:relative;
+	top:0px;
+	background-color: rgba(0, 0, 0, 0.4); /* Must be partially transparent */
+	backdrop-filter: blur(10px);
+	color:white;
+	text-shadow: 2px 2px 2px black;
+}
+
+main > div:hover .top{
+	padding:20px;
+	opacity:1;
+	height:90%;
+}
+
+
+.bottom{
+height:10%;
+background:black;
+transition:all 0.5s;
+position:relative;
+top:50%;
+transform: translateY(-50%);
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:200%;
+}
+
+
+main > div:hover .bottom{
+top:0px;
+transform: translateY(0);
+}
+
+.link{
+	color:black;
+	text-decoration:none;
+	background:white;
+	padding:20px;
+	display:block;
+	position:relative;
+	margin-top:20px;
+	height:60px;
+	width:150px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border: 2px solid black;
+	border-radius: 10px;
+	transition:all 0.2s;
+	text-shadow: none;
+}
+
+.link:hover{
+	height:80px;
+	width:200px;
+	background:rgb(31, 138, 31);
+	color:white;
+	font-size:20px;
+}
